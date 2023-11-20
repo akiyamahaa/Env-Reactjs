@@ -42,6 +42,11 @@ const headerTabList: IHeaderTab[] = [
     name: "Liên hệ",
     path: "/contact",
   },
+  {
+    title: "exchange",
+    name: "Phần thưởng",
+    path: "/exchange",
+  },
 ];
 
 function Header() {

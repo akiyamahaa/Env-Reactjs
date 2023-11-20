@@ -16,10 +16,8 @@ type Props = {
 
 // TODO: Build UI for Mission Detail
 const MissionDetails = (props: Props) => {
-
-  const param = useParams()
+  const param = useParams();
   console.log(param);
-  
 
   return (
     <main className="mission-details--mission-details">

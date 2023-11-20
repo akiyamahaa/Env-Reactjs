@@ -18,6 +18,7 @@ import LayoutRoute from "./LayoutRoute";
 import Contact from "../../pages/Contact/Contact";
 import Missions from "../../pages/Missions/Missions";
 import MissionDetails from "../../pages/MissionDetails/MissionDetails";
+import Reward from "../../pages/Reward/Reward";
 
 type Props = {};
 
@@ -54,6 +55,7 @@ const RouterConfig = (props: Props) => {
         <Route path="activity" element={<Activity />} />
         <Route path="unauthorized" element={<UnAuthorized />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="exchange" element={<Reward />} />
         {/* For user */}
         <Route element={<ProtectedRoute allowedRoles={[ROLES.USER]} />}>
           <Route path="/profile/:id" element={<Profile />} />
