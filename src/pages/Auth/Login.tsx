@@ -30,7 +30,7 @@ const Login = (props: Props) => {
         password
       );
       const user = userCredential.user;
-      localStorage.setItem("uid", user.uid);
+      localStorage.setItem("uid", user.uid);  
       await dispatch(fetchUser(user.uid));
       navigate("/");
     } catch (err: any) {
