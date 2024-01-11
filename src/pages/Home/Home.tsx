@@ -71,29 +71,24 @@ const Home = (props: Props) => {
               đến sức khoẻ con người.
             </div>
           </div>
-          <Box>
-            <Grid container>
-              <Grid item md={8}>
-                <Box className={classes.test}>Vấn nạn ô nhiễm môi trường</Box>
-                <Box>Cần hành động ngay vì một Việt Nam xanh và sạch</Box>
-              </Grid>
-
-              <Grid></Grid>
-            </Grid>
-          </Box>
 
           <div className="main--dump">
-            <div className="main--problem">
-              <h1 className="main--problem1">Vấn nạn ô nhiễm môi trường</h1>
-              <div className="main--problem2">
-                Cần hành động ngay vì một Việt Nam xanh và sạch
-              </div>
-            </div>
-
-            <div className="main--pics">
-              <div className="main--second_pic"></div>
-              <div className="main--third_pic"></div>
-            </div>
+            <Grid container justifyContent={"center"} rowSpacing={12}>
+              <Grid item md={6} xs={12} className="main--mission">
+                <div className="main--problem">
+                  <h1 className="main--problem1">Vấn nạn ô nhiễm môi trường</h1>
+                  <div className="main--problem2">
+                    Cần hành động ngay vì một Việt Nam xanh và sạch
+                  </div>
+                </div>
+              </Grid>
+              <Grid item md={6} xs={12} className="main--mission">
+                <div className="main--pics">
+                  <div className="main--second_pic"></div>
+                  <div className="main--third_pic"></div>
+                </div>
+              </Grid>
+            </Grid>
           </div>
 
           <div className="main--doiqua">

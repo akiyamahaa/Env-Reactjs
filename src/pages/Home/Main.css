@@ -174,11 +174,9 @@
 
 .main--dump {
   width: 100%;
-  height: 785px;
   background-image: url("./pictures/dump1.png");
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 
 .main--problem {

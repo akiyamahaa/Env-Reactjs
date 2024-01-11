@@ -43,8 +43,8 @@ const RouterConfig = (props: Props) => {
 
   return (
     <Routes>
-      {/* Add layout */}
       {/* Add error, loading */}
+
       {/* public routes */}
       <Route element={<LayoutRoute />}>
         <Route path="/" element={<Home />} />
@@ -62,14 +62,14 @@ const RouterConfig = (props: Props) => {
         <Route element={<ProtectedRoute allowedRoles={[ROLES.ADMIN]} />}>
           <Route path="/dashboard" element={<Dashboard />} />
         </Route>
+        {/* Catch all */}
+        <Route path="*" element={<Missing />} />
       </Route>
 
       <Route element={<GuestRoute />}>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Route>
-      {/* Catch all */}
-      <Route path="*" element={<Missing />} />
     </Routes>
   );
 };
