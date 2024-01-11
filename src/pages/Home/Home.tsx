@@ -6,6 +6,7 @@ import volunteer2 from "./pictures/volunteer2.png";
 import { useNavigate } from "react-router";
 import ButtonGradient from "../../components/form/ButtonGradient";
 import { Box, Grid } from "@mui/material";
+import { createMissions } from "../../data/mockup";
 
 type Props = {
   className?: string;
@@ -22,6 +23,7 @@ const Home = (props: Props) => {
 
   const handleToContact = () => {
     navigate("/contact");
+    // createMissions();
   };
 
   useEffect(() => {}, []);

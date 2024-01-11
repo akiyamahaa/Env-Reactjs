@@ -6,18 +6,20 @@ import userIcon from "./img/user-solid.svg";
 import missionImg from "./img/mission-img.png";
 import "./MissionCard.css";
 import { useNavigate } from "react-router-dom";
+import { IMission } from "../../../types/mission";
+import { Typography } from "@mui/material";
 
 // get document by id firebase
 
 type Props = {
-  id: string;
+  info: IMission;
 };
 // TODO: Build UI
 const MissionCard = (props: Props) => {
   const navigate = useNavigate();
 
   const ToDetails = () => {
-    navigate(`/mission/${props.id}`);
+    navigate(`/mission/${props.info.id}`);
   };
 
   return (
@@ -26,13 +28,10 @@ const MissionCard = (props: Props) => {
         <div className="mission--container">
           <div className="mission--about_part">
             <div className="mission--about_part_line1">
-              <div className="mission--title">Nhiệm vụ làm sạch {props.id}</div>
+              <div className="mission--title">{props.info.title}</div>
             </div>
             <div className="mission--description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta,
-              odit magnam numquam provident quaerat aut quidem voluptatum ad.
-              Fuga nemo voluptates ab veritatis suscipit esse? Vero corporis
-              dolores nesciunt voluptatibus.
+              <Typography>{props.info.content}</Typography>
             </div>
           </div>
           <div className="mission--contacts">
@@ -43,7 +42,7 @@ const MissionCard = (props: Props) => {
                 className="mission--contact_icon"
               />
               <div className="mission--contact_info" id="mission--contact_call">
-                (+84) 912 345 678
+                {props.info.phoneNumber}
               </div>
             </div>
             <div className="mission--location">
@@ -52,17 +51,15 @@ const MissionCard = (props: Props) => {
                 alt="location icon"
                 className="mission--location_icon"
               />
-              <div className="mission--location_info">
-                Số 11, Vũ Phạm Hàm, Yên Hòa, Cầu Giấy, HN
-              </div>
+              <div className="mission--location_info">{props.info.address}</div>
             </div>
           </div>
           <div className="mission--rewards">
             <img src={rewardIcon} alt="" className="mission--reward_icon" />
-            <div className="mission--reward_value">+50</div>
+            <div className="mission--reward_value">+ {props.info.score}</div>
           </div>
           <div className="mission--volunteers_required">
-            <img src={userIcon} alt="" /> 0 / 3
+            <img src={userIcon} alt="" /> 0 / {props.info.participants}
           </div>
           <div className="mission--buttons">
             <button className="mission--button mission--join_button">

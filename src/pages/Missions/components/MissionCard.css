@@ -80,6 +80,10 @@
 
 .mission--description {
   font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100px;
+  
 }
 
 .mission--contact,
